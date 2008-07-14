@@ -27,8 +27,11 @@ class FlickrSearch < ActiveRecord::Base
       :title => raw_photo.title,
       :license => raw_photo.license,
       :flickr_url => raw_photo.url(:original),
+      :flickr_url_large => raw_photo.url(:large),
+      :flickr_url_medium => raw_photo.url(:medium),
+      :flickr_views => raw_photo.views.to_i,
       :flickr_search_id => self.id,
-      :image_file_url => raw_photo.url(:original)
+      :image_file_url => raw_photo.url(:original) || raw_photo.url(:large) || raw_photo.url(:medium) || "error"
     )
     if photo.save
       photo.tag_list.add(*raw_photo.tags.split)

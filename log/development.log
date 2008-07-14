@@ -478,3 +478,504 @@ c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
 Rendering template within layouts/application
 Rendering photos/index
 Completed in 0.01837 (54 reqs/sec) | Rendering: 0.00637 (34%) | DB: 0.00154 (8%) | 200 OK [http://localhost/photos]
+  [4;36;1mSQL (0.000853)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000331)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000249)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000252)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhotos (20080714193302)
+  [4;35;1mSQL (0.000251)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFlickrSearches (20080714193527)
+  [4;36;1mSQL (0.000250)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateTags (20080714193612)
+  [4;35;1mSQL (0.000247)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ActsAsTaggableMigration (20080714194718)
+  [4;36;1mSQL (0.000247)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddOtherFlickrUrlsToPhoto (20080714214210)
+  [4;35;1mSQL (0.000246)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.002950)[0m   [0mALTER TABLE "photos" ADD "flickr_url_large" varchar(255)[0m
+  [4;36;1mSQL (0.009982)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.003821)[0m   [0mALTER TABLE "photos" ADD "flickr_url_medium" varchar(255)[0m
+  [4;36;1mSQL (0.009651)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.002660)[0m   [0mALTER TABLE "photos" ADD "flickr_views" integer[0m
+  [4;36;1mSQL (0.012549)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.002083)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080714214210')[0m
+  [4;36;1mSQL (0.000370)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000310)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000049)[0m   [0;1mPRAGMA index_list("flickr_searches")[0m
+  [4;35;1mSQL (0.000062)[0m   [0mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mPRAGMA index_list("taggings")[0m
+  [4;35;1mSQL (0.000306)[0m   [0mPRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type')[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [4;35;1mSQL (0.000049)[0m   [0mPRAGMA index_list("tags")[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-14 16:50:46) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.001060)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.04997 (20 reqs/sec) | Rendering: 0.03955 (79%) | DB: 0.00106 (2%) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2008-07-14 16:50:55) [DELETE]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"authenticity_token"=>"b36d1bf5b2a6b1b1b040a2322d0e6748befd7273", "_method"=>"delete", "action"=>"destroy", "id"=>"1", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000450)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+  [4;36;1mTagging Load (0.000314)[0m   [0;1mSELECT * FROM "taggings" WHERE ("taggings".taggable_id = 1 AND "taggings".taggable_type = 'Photo') [0m
+  [4;35;1mPhoto Destroy (0.000427)[0m   [0m DELETE FROM "photos"
+ WHERE "id" = 1
+[0m
+Redirected to http://localhost:3000/photos
+Completed in 0.02559 (39 reqs/sec) | DB: 0.00119 (4%) | 302 Found [http://localhost/photos/1]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-14 16:50:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000575)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.00969 (103 reqs/sec) | Rendering: 0.00086 (8%) | DB: 0.00058 (5%) | 200 OK [http://localhost/photos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-07-14 16:51:01) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/flickr_searchers" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing FlickrSearchesController#index (for 127.0.0.1 at 2008-07-14 16:51:04) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"flickr_searches"}
+
+
+SyntaxError (/Users/vlandham/Sites/minds_eye/app/models/flickr_search.rb:33: syntax error, unexpected tSYMBEG, expecting ')'
+      :flickr_search_id => self.id,
+       ^
+/Users/vlandham/Sites/minds_eye/app/models/flickr_search.rb:34: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+      :image_file_url => raw_photo.url(:original)
+                        ^
+/Users/vlandham/Sites/minds_eye/app/models/flickr_search.rb:35: syntax error, unexpected ')', expecting kEND):
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:215:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:215:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:214:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:95:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:467:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:479:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:272:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:483:in `const_missing'
+    /app/controllers/flickr_searches_controller.rb:5:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing FlickrSearchesController#index (for 127.0.0.1 at 2008-07-14 16:51:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"flickr_searches"}
+  [4;35;1mFlickrSearch Load (0.000724)[0m   [0mSELECT * FROM "flickr_searches" [0m
+Rendering template within layouts/application
+Rendering flickr_searches/index
+Completed in 0.01286 (77 reqs/sec) | Rendering: 0.00504 (39%) | DB: 0.00072 (5%) | 200 OK [http://localhost/flickr_searches]
+
+
+Processing FlickrSearchesController#destroy (for 127.0.0.1 at 2008-07-14 16:51:25) [DELETE]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"authenticity_token"=>"b36d1bf5b2a6b1b1b040a2322d0e6748befd7273", "_method"=>"delete", "action"=>"destroy", "id"=>"1", "controller"=>"flickr_searches"}
+  [4;36;1mFlickrSearch Load (0.000270)[0m   [0;1mSELECT * FROM "flickr_searches" WHERE ("flickr_searches"."id" = 1) [0m
+  [4;35;1mFlickrSearch Destroy (0.000318)[0m   [0m DELETE FROM "flickr_searches"
+ WHERE "id" = 1
+[0m
+Redirected to http://localhost:3000/flickr_searches
+Completed in 0.01260 (79 reqs/sec) | DB: 0.00059 (4%) | 302 Found [http://localhost/flickr_searches/1]
+
+
+Processing FlickrSearchesController#index (for 127.0.0.1 at 2008-07-14 16:51:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"flickr_searches"}
+  [4;36;1mFlickrSearch Load (0.000534)[0m   [0;1mSELECT * FROM "flickr_searches" [0m
+Rendering template within layouts/application
+Rendering flickr_searches/index
+Completed in 0.00774 (129 reqs/sec) | Rendering: 0.00089 (11%) | DB: 0.00053 (6%) | 200 OK [http://localhost/flickr_searches]
+
+
+Processing FlickrSearchesController#new (for 127.0.0.1 at 2008-07-14 16:51:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"new", "controller"=>"flickr_searches"}
+Rendering template within layouts/application
+Rendering flickr_searches/new
+Completed in 0.01231 (81 reqs/sec) | Rendering: 0.00472 (38%) | DB: 0.00000 (0%) | 200 OK [http://localhost/flickr_searches/new]
+
+
+Processing FlickrSearchesController#create (for 127.0.0.1 at 2008-07-14 16:51:36) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"commit"=>"Create", "flickr_search"=>{"search_parameter"=>"ruby-flickr", "start_page"=>"1", "end_page"=>"1", "search_type"=>"tags"}, "authenticity_token"=>"b36d1bf5b2a6b1b1b040a2322d0e6748befd7273", "action"=>"create", "controller"=>"flickr_searches"}
+  [4;35;1mFlickrSearch Create (0.000390)[0m   [0mINSERT INTO "flickr_searches" ("search_parameter", "start_page", "end_page", "updated_at", "search_type", "created_at") VALUES('ruby-flickr', 1, 1, '2008-07-14 21:51:36', 'tags', '2008-07-14 21:51:36')[0m
+  [4;36;1mPhoto Load (0.000239)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."flickr_id" = '2370093674') LIMIT 1[0m
+  [4;35;1mPhoto Create (0.000474)[0m   [0mINSERT INTO "photos" ("taken_at", "image_height", "flickr_views", "flickr_id", "license", "flickr_url", "updated_at", "flickr_url_large", "title", "flickr_search_id", "image_filename", "description", "image_width", "uploaded_at", "flickr_url_medium", "created_at") VALUES('2008-03-19 16:18:49', 2304, 37, 2370093674, 0, 'http://farm3.static.flickr.com/2417/2370093674_f54fab4850_o.jpg', '2008-07-14 21:51:41', 'http://farm3.static.flickr.com/2417/2370093674_951ae31c84_b.jpg', 'IMG_5230.JPG', 2, 'http://farm3.static.flickr.com/2417/2370093674_f54fab4850_o.jpg', '', 3456, '2008-03-28 23:54:45', 'http://farm3.static.flickr.com/2417/2370093674_951ae31c84.jpg', '2008-07-14 21:51:41')[0m
+  [4;36;1mTag Load (0.000307)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN taggings ON tags.id = taggings.tag_id WHERE (("taggings".taggable_type = 'Photo') AND ("taggings".taggable_id = 2)) [0m
+  [4;35;1mPhoto Load (0.000150)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."flickr_id" = '2356925194') LIMIT 1[0m
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?):
+    /vendor/plugins/fleximage/lib/fleximage/model.rb:271:in `image_file_url='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:2361:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:2361:in `attributes='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:2360:in `each'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:2360:in `attributes='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:2130:in `initialize'
+    /app/models/flickr_search.rb:22:in `new'
+    /app/models/flickr_search.rb:22:in `save_photo'
+    /app/models/flickr_search.rb:13:in `execute'
+    /Library/Ruby/Gems/1.8/gems/flickr-fu-0.1.4/lib/flickr/photo_response.rb:35:in `each'
+    /Library/Ruby/Gems/1.8/gems/flickr-fu-0.1.4/lib/flickr/photo_response.rb:35:in `send'
+    /Library/Ruby/Gems/1.8/gems/flickr-fu-0.1.4/lib/flickr/photo_response.rb:35:in `method_missing'
+    /app/models/flickr_search.rb:12:in `execute'
+    /app/models/flickr_search.rb:7:in `each'
+    /app/models/flickr_search.rb:7:in `execute'
+    /app/controllers/flickr_searches_controller.rb:47:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/flickr_searches_controller.rb:45:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing FlickrSearchesController#index (for 127.0.0.1 at 2008-07-14 16:57:24) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"flickr_searches"}
+  [4;36;1mFlickrSearch Load (0.000966)[0m   [0;1mSELECT * FROM "flickr_searches" [0m
+Rendering template within layouts/application
+Rendering flickr_searches/index
+Completed in 0.01487 (67 reqs/sec) | Rendering: 0.00655 (44%) | DB: 0.00097 (6%) | 200 OK [http://localhost/flickr_searches]
+
+
+Processing FlickrSearchesController#destroy (for 127.0.0.1 at 2008-07-14 16:57:27) [DELETE]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"authenticity_token"=>"b36d1bf5b2a6b1b1b040a2322d0e6748befd7273", "_method"=>"delete", "action"=>"destroy", "id"=>"2", "controller"=>"flickr_searches"}
+  [4;35;1mFlickrSearch Load (0.000292)[0m   [0mSELECT * FROM "flickr_searches" WHERE ("flickr_searches"."id" = 2) [0m
+  [4;36;1mFlickrSearch Destroy (0.000514)[0m   [0;1m DELETE FROM "flickr_searches"
+ WHERE "id" = 2
+[0m
+Redirected to http://localhost:3000/flickr_searches
+Completed in 0.01519 (65 reqs/sec) | DB: 0.00081 (5%) | 302 Found [http://localhost/flickr_searches/2]
+
+
+Processing FlickrSearchesController#index (for 127.0.0.1 at 2008-07-14 16:57:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"flickr_searches"}
+  [4;35;1mFlickrSearch Load (0.000548)[0m   [0mSELECT * FROM "flickr_searches" [0m
+Rendering template within layouts/application
+Rendering flickr_searches/index
+Completed in 0.00762 (131 reqs/sec) | Rendering: 0.00082 (10%) | DB: 0.00055 (7%) | 200 OK [http://localhost/flickr_searches]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-14 16:57:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000824)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.05054 (19 reqs/sec) | Rendering: 0.04102 (81%) | DB: 0.00082 (1%) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2008-07-14 16:57:41) [DELETE]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"authenticity_token"=>"b36d1bf5b2a6b1b1b040a2322d0e6748befd7273", "_method"=>"delete", "action"=>"destroy", "id"=>"2", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000448)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 2) [0m
+  [4;36;1mTagging Load (0.000183)[0m   [0;1mSELECT * FROM "taggings" WHERE ("taggings".taggable_id = 2 AND "taggings".taggable_type = 'Photo') [0m
+  [4;35;1mPhoto Destroy (0.000569)[0m   [0m DELETE FROM "photos"
+ WHERE "id" = 2
+[0m
+Redirected to http://localhost:3000/photos
+Completed in 0.02485 (40 reqs/sec) | DB: 0.00120 (4%) | 302 Found [http://localhost/photos/2]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-14 16:57:41) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000556)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.00907 (110 reqs/sec) | Rendering: 0.00084 (9%) | DB: 0.00056 (6%) | 200 OK [http://localhost/photos]
+
+
+Processing FlickrSearchesController#index (for 127.0.0.1 at 2008-07-14 16:57:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"flickr_searches"}
+  [4;35;1mFlickrSearch Load (0.001038)[0m   [0mSELECT * FROM "flickr_searches" [0m
+Rendering template within layouts/application
+Rendering flickr_searches/index
+Completed in 0.00960 (104 reqs/sec) | Rendering: 0.00103 (10%) | DB: 0.00104 (10%) | 200 OK [http://localhost/flickr_searches]
+
+
+Processing FlickrSearchesController#new (for 127.0.0.1 at 2008-07-14 16:57:50) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"new", "controller"=>"flickr_searches"}
+Rendering template within layouts/application
+Rendering flickr_searches/new
+Completed in 0.01266 (79 reqs/sec) | Rendering: 0.00504 (39%) | DB: 0.00000 (0%) | 200 OK [http://localhost/flickr_searches/new]
+
+
+Processing FlickrSearchesController#create (for 127.0.0.1 at 2008-07-14 16:58:25) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"commit"=>"Create", "flickr_search"=>{"search_parameter"=>"ruby-flickr", "start_page"=>"1", "end_page"=>"1", "search_type"=>"tags"}, "authenticity_token"=>"b36d1bf5b2a6b1b1b040a2322d0e6748befd7273", "action"=>"create", "controller"=>"flickr_searches"}
+  [4;36;1mFlickrSearch Create (0.000449)[0m   [0;1mINSERT INTO "flickr_searches" ("search_parameter", "start_page", "end_page", "updated_at", "search_type", "created_at") VALUES('ruby-flickr', 1, 1, '2008-07-14 21:58:25', 'tags', '2008-07-14 21:58:25')[0m
+  [4;35;1mPhoto Load (0.000241)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."flickr_id" = '2370093674') LIMIT 1[0m
+  [4;36;1mPhoto Create (0.000439)[0m   [0;1mINSERT INTO "photos" ("taken_at", "image_height", "flickr_views", "flickr_id", "license", "flickr_url", "updated_at", "flickr_url_large", "title", "flickr_search_id", "image_filename", "description", "image_width", "uploaded_at", "flickr_url_medium", "created_at") VALUES('2008-03-19 16:18:49', 2304, 37, 2370093674, 0, 'http://farm3.static.flickr.com/2417/2370093674_f54fab4850_o.jpg', '2008-07-14 21:58:30', 'http://farm3.static.flickr.com/2417/2370093674_951ae31c84_b.jpg', 'IMG_5230.JPG', 3, 'http://farm3.static.flickr.com/2417/2370093674_f54fab4850_o.jpg', '', 3456, '2008-03-28 23:54:45', 'http://farm3.static.flickr.com/2417/2370093674_951ae31c84.jpg', '2008-07-14 21:58:30')[0m
+  [4;35;1mTag Load (0.000301)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN taggings ON tags.id = taggings.tag_id WHERE (("taggings".taggable_type = 'Photo') AND ("taggings".taggable_id = 3)) [0m
+  [4;36;1mPhoto Load (0.000156)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."flickr_id" = '2356925194') LIMIT 1[0m
+  [4;35;1mPhoto Create (0.000420)[0m   [0mINSERT INTO "photos" ("taken_at", "image_height", "flickr_views", "flickr_id", "license", "flickr_url", "updated_at", "flickr_url_large", "title", "flickr_search_id", "image_filename", "description", "image_width", "uploaded_at", "flickr_url_medium", "created_at") VALUES('2008-03-23 20:35:04', 682, 24, 2356925194, 0, NULL, '2008-07-14 21:59:02', 'http://farm3.static.flickr.com/2405/2356925194_1889df8ea9_b.jpg', 'Father & Son Easter Nap', 3, 'http://farm3.static.flickr.com/2405/2356925194_1889df8ea9_b.jpg', 'I laid down for a second while I was at my sisters for Easter .... and woke up 2.5 hours later.', 1024, '2008-03-24 03:13:23', 'http://farm3.static.flickr.com/2405/2356925194_1889df8ea9.jpg', '2008-07-14 21:59:02')[0m
+  [4;36;1mTag Load (0.000232)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN taggings ON tags.id = taggings.tag_id WHERE (("taggings".taggable_type = 'Photo') AND ("taggings".taggable_id = 4)) [0m
+  [4;35;1mPhoto Load (0.000175)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."flickr_id" = '395906592') LIMIT 1[0m
+  [4;36;1mPhoto Create (0.000475)[0m   [0;1mINSERT INTO "photos" ("taken_at", "image_height", "flickr_views", "flickr_id", "license", "flickr_url", "updated_at", "flickr_url_large", "title", "flickr_search_id", "image_filename", "description", "image_width", "uploaded_at", "flickr_url_medium", "created_at") VALUES('2007-02-19 22:56:03', 400, 48, 395906592, 3, 'http://farm1.static.flickr.com/177/395906592_9ccd51cd16_o.jpg', '2008-07-14 21:59:06', NULL, 'The Roches (http://www.roches.com)', 3, 'http://farm1.static.flickr.com/177/395906592_9ccd51cd16_o.jpg', 'I''d never heard of this band before but they''ve been around a long time... I thought &quot;No Shoes&quot; was a pretty cool song. Plan on buying the album.
+
+<a href="http://www.roches.com/lyrics/moonswept.html#NOSHOES">www.roches.com/lyrics/moonswept.html#NOSHOES</a>', 400, '2007-02-19 22:56:03', 'http://farm1.static.flickr.com/177/395906592_9ccd51cd16.jpg', '2008-07-14 21:59:06')[0m
+  [4;35;1mTag Load (0.000363)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN taggings ON tags.id = taggings.tag_id WHERE (("taggings".taggable_type = 'Photo') AND ("taggings".taggable_id = 5)) [0m
+  [4;36;1mPhoto Load (0.000298)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."flickr_id" = '351852745') LIMIT 1[0m
+  [4;35;1mPhoto Create (0.000422)[0m   [0mINSERT INTO "photos" ("taken_at", "image_height", "flickr_views", "flickr_id", "license", "flickr_url", "updated_at", "flickr_url_large", "title", "flickr_search_id", "image_filename", "description", "image_width", "uploaded_at", "flickr_url_medium", "created_at") VALUES('2006-11-04 17:54:03', 1024, 48, 351852745, 0, NULL, '2008-07-14 21:59:08', 'http://farm1.static.flickr.com/163/351852745_03a3a9275e_b.jpg', 'Ironman Florida 2006', 3, 'http://farm1.static.flickr.com/163/351852745_03a3a9275e_b.jpg', '', 718, '2007-01-09 17:54:03', 'http://farm1.static.flickr.com/163/351852745_03a3a9275e.jpg', '2008-07-14 21:59:08')[0m
+  [4;36;1mTag Load (0.000345)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN taggings ON tags.id = taggings.tag_id WHERE (("taggings".taggable_type = 'Photo') AND ("taggings".taggable_id = 6)) [0m
+Redirected to http://localhost:3000/flickr_searches/3
+Completed in 46.18705 (0 reqs/sec) | DB: 0.00432 (0%) | 302 Found [http://localhost/flickr_searches]
+
+
+Processing FlickrSearchesController#show (for 127.0.0.1 at 2008-07-14 16:59:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIitGbGlja3JTZWFyY2ggd2FzIHN1Y2Nlc3NmdWxseSBj
+cmVhdGVkLgY6CkB1c2VkewY7B0Y=--f3d07f13c33e21a17ff0f2fbad9099e783257f7e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"flickr_searches"}
+  [4;35;1mFlickrSearch Load (0.000350)[0m   [0mSELECT * FROM "flickr_searches" WHERE ("flickr_searches"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering flickr_searches/show
+Completed in 0.02472 (40 reqs/sec) | Rendering: 0.00328 (13%) | DB: 0.00035 (1%) | 200 OK [http://localhost/flickr_searches/3]
+
+
+Processing FlickrSearchesController#index (for 127.0.0.1 at 2008-07-14 16:59:21) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIitGbGlja3JTZWFyY2ggd2FzIHN1Y2Nlc3NmdWxseSBj
+cmVhdGVkLgY6CkB1c2VkewY7B1Q=--b5aad19e6e9f6d576195edb6cb12541d0c3afef6
+  Parameters: {"action"=>"index", "controller"=>"flickr_searches"}
+  [4;36;1mFlickrSearch Load (0.000636)[0m   [0;1mSELECT * FROM "flickr_searches" [0m
+Rendering template within layouts/application
+Rendering flickr_searches/index
+Completed in 0.01028 (97 reqs/sec) | Rendering: 0.00331 (32%) | DB: 0.00064 (6%) | 200 OK [http://localhost/flickr_searches]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-14 16:59:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTI3YzBmYjc5Zjc5OWUwZmE5Yzg0YTRlMDc5ZTdk
+ODIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ca60356acd49af2ba0511aefdd831545cf44efbe
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.001296)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.01758 (56 reqs/sec) | Rendering: 0.00774 (44%) | DB: 0.00130 (7%) | 200 OK [http://localhost/photos]

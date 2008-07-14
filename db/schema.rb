@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080714194718) do
+ActiveRecord::Schema.define(:version => 20080714214210) do
 
   create_table "flickr_searches", :force => true do |t|
     t.string   "search_parameter"
@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(:version => 20080714194718) do
     t.integer  "image_height"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "flickr_url_large"
+    t.string   "flickr_url_medium"
+    t.integer  "flickr_views"
   end
 
   create_table "taggings", :force => true do |t|
