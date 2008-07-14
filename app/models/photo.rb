@@ -4,5 +4,6 @@ class Photo < ActiveRecord::Base
   # To install used the command:
   # ./script/plugin install git://github.com/mattetti/acts_as_taggable_on_steroids.git
   acts_as_taggable 
+  acts_as_fleximage :image_directory => 'public/images/photos'
   belongs_to :flickr_search
 end
