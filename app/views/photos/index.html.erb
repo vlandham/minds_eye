@@ -1,0 +1,40 @@
+<h1>Listing photos</h1>
+
+<table>
+  <tr>
+    <th>Flickr</th>
+    <th>Taken at</th>
+    <th>Uploaded at</th>
+    <th>Description</th>
+    <th>Title</th>
+    <th>License</th>
+    <th>Flickr url</th>
+    <th>Flickr search</th>
+    <th>Image filename</th>
+    <th>Image width</th>
+    <th>Image height</th>
+  </tr>
+
+<% for photo in @photos %>
+  <tr>
+    <td><%=h photo.flickr_id %></td>
+    <td><%=h photo.taken_at %></td>
+    <td><%=h photo.uploaded_at %></td>
+    <td><%=h photo.description %></td>
+    <td><%=h photo.title %></td>
+    <td><%=h photo.license %></td>
+    <td><%=h photo.flickr_url %></td>
+    <td><%=h photo.flickr_search_id %></td>
+    <td><%=h photo.image_filename %></td>
+    <td><%=h photo.image_width %></td>
+    <td><%=h photo.image_height %></td>
+    <td><%= link_to 'Show', photo %></td>
+    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+    <td><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New photo', new_photo_path %>

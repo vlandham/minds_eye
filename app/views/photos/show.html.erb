@@ -1,0 +1,58 @@
+<p>
+  <b>Flickr:</b>
+  <%=h @photo.flickr_id %>
+</p>
+
+<p>
+  <b>Taken at:</b>
+  <%=h @photo.taken_at %>
+</p>
+
+<p>
+  <b>Uploaded at:</b>
+  <%=h @photo.uploaded_at %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @photo.description %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @photo.title %>
+</p>
+
+<p>
+  <b>License:</b>
+  <%=h @photo.license %>
+</p>
+
+<p>
+  <b>Flickr url:</b>
+  <%=h @photo.flickr_url %>
+</p>
+
+<p>
+  <b>Flickr search:</b>
+  <%=h @photo.flickr_search_id %>
+</p>
+
+<p>
+  <b>Image filename:</b>
+  <%=h @photo.image_filename %>
+</p>
+
+<p>
+  <b>Image width:</b>
+  <%=h @photo.image_width %>
+</p>
+
+<p>
+  <b>Image height:</b>
+  <%=h @photo.image_height %>
+</p>
+
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

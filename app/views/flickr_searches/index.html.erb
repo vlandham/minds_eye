@@ -1,0 +1,26 @@
+<h1>Listing flickr_searches</h1>
+
+<table>
+  <tr>
+    <th>Search parameter</th>
+    <th>Search type</th>
+    <th>Start page</th>
+    <th>End page</th>
+  </tr>
+
+<% for flickr_search in @flickr_searches %>
+  <tr>
+    <td><%=h flickr_search.search_parameter %></td>
+    <td><%=h flickr_search.search_type %></td>
+    <td><%=h flickr_search.start_page %></td>
+    <td><%=h flickr_search.end_page %></td>
+    <td><%= link_to 'Show', flickr_search %></td>
+    <td><%= link_to 'Edit', edit_flickr_search_path(flickr_search) %></td>
+    <td><%= link_to 'Destroy', flickr_search, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New flickr_search', new_flickr_search_path %>

@@ -1,0 +1,84 @@
+  [4;36;1mSQL (0.000412)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000293)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.002537)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002227)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000334)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhotos (20080714193302)
+  [4;36;1mSQL (0.000092)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002274)[0m   [0mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "flickr_id" integer DEFAULT NULL NULL, "taken_at" datetime DEFAULT NULL NULL, "uploaded_at" datetime DEFAULT NULL NULL, "description" text DEFAULT NULL NULL, "title" varchar(255) DEFAULT NULL NULL, "license" integer DEFAULT NULL NULL, "flickr_url" varchar(255) DEFAULT NULL NULL, "flickr_search_id" integer DEFAULT NULL NULL, "image_filename" varchar(255) DEFAULT NULL NULL, "image_width" integer DEFAULT NULL NULL, "image_height" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.001770)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080714193302')[0m
+Migrating to CreateFlickrSearches (20080714193527)
+  [4;35;1mSQL (0.000243)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001836)[0m   [0;1mCREATE TABLE "flickr_searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "search_parameter" varchar(255) DEFAULT NULL NULL, "search_type" varchar(255) DEFAULT NULL NULL, "start_page" integer DEFAULT NULL NULL, "end_page" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.001858)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080714193527')[0m
+Migrating to CreateTags (20080714193612)
+  [4;36;1mSQL (0.000350)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002268)[0m   [0mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "raw" varchar(255) DEFAULT NULL NULL, "body" varchar(255) DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.001968)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080714193612')[0m
+  [4;35;1mSQL (0.000438)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000498)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000078)[0m   [0mPRAGMA index_list("flickr_searches")[0m
+  [4;36;1mSQL (0.000063)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;35;1mSQL (0.000056)[0m   [0mPRAGMA index_list("tags")[0m
+  [4;36;1mSQL (0.000660)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000337)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000227)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000221)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhotos (20080714193302)
+  [4;36;1mSQL (0.000220)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateFlickrSearches (20080714193527)
+  [4;35;1mSQL (0.000222)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTags (20080714193612)
+  [4;36;1mSQL (0.000222)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to ActsAsTaggableMigration (20080714194718)
+  [4;35;1mSQL (0.000240)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table "tags" already exists: CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.000663)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000270)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000223)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhotos (20080714193302)
+  [4;36;1mSQL (0.000216)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateFlickrSearches (20080714193527)
+  [4;35;1mSQL (0.000215)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTags (20080714193612)
+  [4;36;1mSQL (0.000213)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to ActsAsTaggableMigration (20080714194718)
+  [4;35;1mSQL (0.000212)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003258)[0m   [0;1mDROP TABLE "tags"[0m
+  [4;35;1mSQL (0.000242)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.002361)[0m   [0;1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.003517)[0m   [0mCREATE TABLE "taggings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer DEFAULT NULL NULL, "taggable_id" integer DEFAULT NULL NULL, "taggable_type" varchar(255) DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.001904)[0m   [0;1mCREATE INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  [4;35;1mSQL (0.003129)[0m   [0mCREATE INDEX "index_taggings_on_taggable_id_and_taggable_type" ON "taggings" ("taggable_id", "taggable_type")[0m
+  [4;36;1mSQL (0.002712)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080714194718')[0m
+  [4;35;1mSQL (0.000592)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000494)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000081)[0m   [0mPRAGMA index_list("flickr_searches")[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;35;1mSQL (0.000286)[0m   [0mPRAGMA index_list("taggings")[0m
+  [4;36;1mSQL (0.000249)[0m   [0;1mPRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type')[0m
+  [4;35;1mSQL (0.000175)[0m   [0mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [4;36;1mSQL (0.000064)[0m   [0;1mPRAGMA index_list("tags")[0m
