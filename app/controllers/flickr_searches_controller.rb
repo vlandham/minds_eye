@@ -44,6 +44,7 @@ class FlickrSearchesController < ApplicationController
 
     respond_to do |format|
       if @flickr_search.save
+        @flickr_search.execute
         flash[:notice] = 'FlickrSearch was successfully created.'
         format.html { redirect_to(@flickr_search) }
         format.xml  { render :xml => @flickr_search, :status => :created, :location => @flickr_search }
