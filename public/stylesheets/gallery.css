@@ -34,7 +34,7 @@
 	float: left;
 }
 
-.photo-title {
+.title {
   text-align: center;
   padding-bottom: 20px;
 }
@@ -44,16 +44,17 @@
   margin: 20px auto;
 }
 
-#tag-box {
+#tagbox {
   clear: right;
   display: block;
   padding: 20px;
 }
 
-#tag-box .tag {
+#tagbox .tag {
   float: left;
   padding: 20px;
   margin-left: 10px;
+  margin-bottom: 10px;
   border: 1px solid #000000;
 }
 

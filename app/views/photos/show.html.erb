@@ -1,4 +1,4 @@
-<h2 class="photo-title">
+<h2 class="title">
   <%=h @photo.flickr_id %>
 </h2>
 
@@ -7,15 +7,7 @@
 </div>
 
 <h2>Tags:</h2>
-<div id="tag-box">
-  <% @photo.tag_list.each do |tag| %>
-    <% div_for(tag, :class => "tag") do %>
-      <%=h tag %>
-    <% end %>
-  <% end %>
-  <div class="clearbox"></div>
-</div>
-
+<%= render :partial => 'tags/tagbox', :locals => {:tags => @photo.tag_list} %>
 <h2>Title:</h2>
 <%=h @photo.title %>
 

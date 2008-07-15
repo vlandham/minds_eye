@@ -13,7 +13,8 @@ class TagsController < ApplicationController
   # GET /tags/1
   # GET /tags/1.xml
   def show
-    @tag = Tag.find(params[:id])
+    @tag = Tag.find_by_name(params[:id])
+    @photos = Photo.find_tagged_with(@tag)
 
     respond_to do |format|
       format.html # show.html.erb
