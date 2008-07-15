@@ -1,0 +1,4 @@
+@photo.operate do |image|
+  image.resize '100x100'
+  # image.shadow
+end
