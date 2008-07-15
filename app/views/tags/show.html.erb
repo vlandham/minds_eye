@@ -1,3 +1,4 @@
 <h2 class="title"><%=h @tag.name %></h2>
 <%= render :partial => 'photos/gallery', :locals => {:photos => @photos}%>
+<%= link_to "Back to Tags", tags_url %>
 

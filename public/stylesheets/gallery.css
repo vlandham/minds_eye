@@ -1,12 +1,12 @@
 #gallery {
 	text-align: left;
-	margin: 20px auto;
+	margin: 10px auto;
 	width: 685px;
-	background: #fff;
-	padding: 20px 30px 70px;
+	background: #ffffff;
+	padding: 20px 20px 20px;
 	border-top: 1px solid #E6E6DF;
 	border-right: 1px solid #E6E6DF;
-	border-bottom: 5px solid #E6E6DF;
+  border-bottom: 1px solid #E6E6DF;
 	border-left: 1px solid #E6E6DF;
 }
 
@@ -45,15 +45,14 @@
 }
 
 #tagbox {
-  clear: right;
-  display: block;
+  clear: both;
   padding: 20px;
+  margin: auto;
 }
 
 #tagbox .tag {
   background-color: #ffffff;
   float: left;
-  
   margin-left: 10px;
   margin-bottom: 10px;
   border: 1px solid #000000;

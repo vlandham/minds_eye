@@ -1,23 +1,9 @@
-<p>
-  <b>Search parameter:</b>
-  <%=h @flickr_search.search_parameter %>
-</p>
-
-<p>
-  <b>Search type:</b>
-  <%=h @flickr_search.search_type %>
-</p>
-
-<p>
-  <b>Start page:</b>
-  <%=h @flickr_search.start_page %>
-</p>
-
-<p>
-  <b>End page:</b>
-  <%=h @flickr_search.end_page %>
-</p>
+<h2 class="title"><%=h @flickr_search.search_parameter %></h2>
+<ul>
+  <li><b>Search type:</b> <%=h @flickr_search.search_type %> </li>
+  <li><b>Start page:</b> <%=h @flickr_search.start_page %></li>
+  <li><b>End page:</b> <%=h @flickr_search.end_page %></li>
+</ul>
 
 
-<%= link_to 'Edit', edit_flickr_search_path(@flickr_search) %> |
 <%= link_to 'Back', flickr_searches_path %>

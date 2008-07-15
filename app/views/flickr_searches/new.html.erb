@@ -1,27 +1,27 @@
-<h1>New flickr_search</h1>
+<h1>Download from Flickr</h1>
 
 <% form_for(@flickr_search) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :search_parameter %><br />
+    <%= f.label "Search" %><br />
     <%= f.text_field :search_parameter %>
   </p>
   <p>
-    <%= f.label :search_type %><br />
-    <%= f.text_field :search_type %>
+    <%= f.label "Type" %><br />
+    <%= f.select :search_type, %w{tags} %>
   </p>
   <p>
-    <%= f.label :start_page %><br />
-    <%= f.text_field :start_page %>
+    <%= f.label "From page" %><br />
+    <%= f.text_field :start_page, {:size => 2} %>
   </p>
   <p>
-    <%= f.label :end_page %><br />
-    <%= f.text_field :end_page %>
+    <%= f.label "To" %><br />
+    <%= f.text_field :end_page, {:size => 2} %>
   </p>
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit "Search &amp; Download" %>
   </p>
 <% end %>
 
-<%= link_to 'Back', flickr_searches_path %>
+<%= link_to 'Cancel', flickr_searches_path %>
