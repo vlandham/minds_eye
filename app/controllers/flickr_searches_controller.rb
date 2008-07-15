@@ -44,7 +44,10 @@ class FlickrSearchesController < ApplicationController
 
     respond_to do |format|
       if @flickr_search.save
-        @flickr_search.execute
+        # Spawn forks so that this won't hang up the whole process
+        spawn do
+          @flickr_search.execute
+        end
         flash[:notice] = 'Now Downloading from Flickr. Please Be Patient'
         format.html { redirect_to(@flickr_search) }
         format.xml  { render :xml => @flickr_search, :status => :created, :location => @flickr_search }
