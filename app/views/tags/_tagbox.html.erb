@@ -1,0 +1,8 @@
+<div id="tagbox">
+  <% for tag in tags %>
+    <% div_for(tag, :class => "tag") do %>
+      <%= link_to tag, tag_url(tag) %>
+    <% end %>
+  <% end %>
+  <div class="clearbox">  </div>
+</div>
