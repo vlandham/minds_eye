@@ -7,11 +7,14 @@
 </div>
 
 <h2>Tags:</h2>
-<% @photo.tag_list.each do |tag| %>
-  <div class="tag">
-    <%=h tag %>
-  </div>
-<% end %>
+<div id="tag-box">
+  <% @photo.tag_list.each do |tag| %>
+    <% div_for(tag, :class => "tag") do %>
+      <%=h tag %>
+    <% end %>
+  <% end %>
+  <div class="clearbox"></div>
+</div>
 
 <h2>Title:</h2>
 <%=h @photo.title %>

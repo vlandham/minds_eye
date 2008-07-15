@@ -3,11 +3,11 @@ module Blueprint
   	def blueprintcss(options = {})
   	  options[:compressed] = false unless options.has_key?(:compressed)
 
-  	  screen_css = options[:compressed] ? 'compressed/screen' : 'screen'
-  	  print_css = options[:compressed] ? 'compressed/print' : 'print'
+  	  screen_css = options[:compressed] ? 'screen' : 'screen'
+  	  print_css = options[:compressed] ? 'print' : 'print'
   	  ie_css = 'lib/ie'
-  	  if options[:compressed] && File.exist?(File.join(RAILS_ROOT, 'stylesheets', 'blueprint', 'compressed', 'ie.css'))
-  	    ie_css = 'compressed/ie'
+  	  if options[:compressed] && File.exist?(File.join(RAILS_ROOT, 'stylesheets', 'blueprint', 'ie.css'))
+  	    ie_css = 'ie'
   	  end
   	  outp = blueprintcss_stylesheet(screen_css, :media => 'screen, projection') + "\n"
   	  outp << blueprintcss_stylesheet(print_css, :media => 'print') + "\n"

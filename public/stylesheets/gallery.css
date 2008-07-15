@@ -44,6 +44,19 @@
   margin: 20px auto;
 }
 
+#tag-box {
+  clear: right;
+  display: block;
+  padding: 20px;
+}
+
+#tag-box .tag {
+  float: left;
+  padding: 20px;
+  margin-left: 10px;
+  border: 1px solid #000000;
+}
+
 .clearbox {
   clear: both;
   height: 10px;

@@ -44,6 +44,7 @@ ul#primary_navigation li#blog a:hover {background-position:0px -24px;}
 }
 
 #content .container {background: #dddddd; width: 900px; margin:auto; padding-top:0px;border-top:3px solid #ebebeb;}
+#content .container p {padding-left: 10px;}
 
 /*#content img  {border: 1px solid #91ac7b;padding:9px;background:#eeffff;}*/
 
@@ -52,6 +53,7 @@ ul#primary_navigation li#blog a:hover {background-position:0px -24px;}
 #logo-text {
 	font-size: 150%;
 }
+
 
 
 /* For great looking type, use this code instead of asdf: 

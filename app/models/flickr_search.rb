@@ -36,7 +36,7 @@ class FlickrSearch < ActiveRecord::Base
     )
     if photo.save
       photo.tag_list.add(*raw_photo.tags.split)
-      photo.tag_list.save
+      photo.save
     end
   end
   
