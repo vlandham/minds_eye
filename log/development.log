@@ -6144,3 +6144,464 @@ ActionController::RoutingError (No route matches "/img/top-statement.jpg" with {
     ./script/server:3
 
 Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-15 08:07:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.001347)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.01498 (66 reqs/sec) | Rendering: 0.00467 (31%) | DB: 0.00135 (8%) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:07:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"3", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000511)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/thumb
+Completed in 1.42749 (0 reqs/sec) | Rendering: 1.41404 (99%) | DB: 0.00051 (0%) | 200 OK [http://localhost/photos/3/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:07:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"4", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000498)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/thumb
+Completed in 0.25068 (3 reqs/sec) | Rendering: 0.23762 (94%) | DB: 0.00050 (0%) | 200 OK [http://localhost/photos/4/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:07:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"5", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000429)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/thumb
+Completed in 0.14183 (7 reqs/sec) | Rendering: 0.12960 (91%) | DB: 0.00043 (0%) | 200 OK [http://localhost/photos/5/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:07:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000433)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/thumb
+Completed in 0.25808 (3 reqs/sec) | Rendering: 0.24626 (95%) | DB: 0.00043 (0%) | 200 OK [http://localhost/photos/6/thumb.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-07-15 08:07:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/img/top-statement.jpg" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-15 08:08:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.001330)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.01461 (68 reqs/sec) | Rendering: 0.00461 (31%) | DB: 0.00133 (9%) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:08:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"3", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000448)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/thumb
+Completed in 1.42137 (0 reqs/sec) | Rendering: 1.40978 (99%) | DB: 0.00045 (0%) | 200 OK [http://localhost/photos/3/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:08:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"4", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000498)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/thumb
+Completed in 0.24853 (4 reqs/sec) | Rendering: 0.23550 (94%) | DB: 0.00050 (0%) | 200 OK [http://localhost/photos/4/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:08:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"5", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000429)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/thumb
+Completed in 0.14115 (7 reqs/sec) | Rendering: 0.12946 (91%) | DB: 0.00043 (0%) | 200 OK [http://localhost/photos/5/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:08:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000439)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/thumb
+Completed in 0.26347 (3 reqs/sec) | Rendering: 0.25129 (95%) | DB: 0.00044 (0%) | 200 OK [http://localhost/photos/6/thumb.jpg]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-15 08:12:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.001486)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.01551 (64 reqs/sec) | Rendering: 0.00466 (30%) | DB: 0.00149 (9%) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:12:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"3", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000692)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/thumb
+Completed in 1.37138 (0 reqs/sec) | Rendering: 1.35954 (99%) | DB: 0.00069 (0%) | 200 OK [http://localhost/photos/3/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:12:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"4", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000436)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/thumb
+Completed in 0.24812 (4 reqs/sec) | Rendering: 0.23538 (94%) | DB: 0.00044 (0%) | 200 OK [http://localhost/photos/4/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:12:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"5", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000450)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/thumb
+Completed in 0.14106 (7 reqs/sec) | Rendering: 0.12905 (91%) | DB: 0.00045 (0%) | 200 OK [http://localhost/photos/5/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:12:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000436)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/thumb
+Completed in 0.25611 (3 reqs/sec) | Rendering: 0.24421 (95%) | DB: 0.00044 (0%) | 200 OK [http://localhost/photos/6/thumb.jpg]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-15 08:13:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.001368)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.01632 (61 reqs/sec) | Rendering: 0.00554 (33%) | DB: 0.00137 (8%) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"3", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000414)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/thumb
+Completed in 1.37221 (0 reqs/sec) | Rendering: 1.36074 (99%) | DB: 0.00041 (0%) | 200 OK [http://localhost/photos/3/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"4", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000479)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/thumb
+Completed in 0.25195 (3 reqs/sec) | Rendering: 0.23851 (94%) | DB: 0.00048 (0%) | 200 OK [http://localhost/photos/4/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"5", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000459)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/thumb
+Completed in 0.14359 (6 reqs/sec) | Rendering: 0.13146 (91%) | DB: 0.00046 (0%) | 200 OK [http://localhost/photos/5/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000437)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/thumb
+Completed in 0.25986 (3 reqs/sec) | Rendering: 0.24796 (95%) | DB: 0.00044 (0%) | 200 OK [http://localhost/photos/6/thumb.jpg]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-15 08:13:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.001383)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.01572 (63 reqs/sec) | Rendering: 0.00539 (34%) | DB: 0.00138 (8%) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"3", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000433)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/thumb
+Completed in 1.37833 (0 reqs/sec) | Rendering: 1.36604 (99%) | DB: 0.00043 (0%) | 200 OK [http://localhost/photos/3/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"4", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000436)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/thumb
+Completed in 0.24806 (4 reqs/sec) | Rendering: 0.23548 (94%) | DB: 0.00044 (0%) | 200 OK [http://localhost/photos/4/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"5", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000470)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/thumb
+Completed in 0.14155 (7 reqs/sec) | Rendering: 0.12939 (91%) | DB: 0.00047 (0%) | 200 OK [http://localhost/photos/5/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000435)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/thumb
+Completed in 0.25652 (3 reqs/sec) | Rendering: 0.24432 (95%) | DB: 0.00043 (0%) | 200 OK [http://localhost/photos/6/thumb.jpg]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-15 08:13:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.001363)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.01545 (64 reqs/sec) | Rendering: 0.00498 (32%) | DB: 0.00136 (8%) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"3", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000418)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/thumb
+Completed in 1.37477 (0 reqs/sec) | Rendering: 1.36303 (99%) | DB: 0.00042 (0%) | 200 OK [http://localhost/photos/3/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:56) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"4", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000445)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/thumb
+Completed in 0.24876 (4 reqs/sec) | Rendering: 0.23512 (94%) | DB: 0.00045 (0%) | 200 OK [http://localhost/photos/4/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"5", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000447)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/thumb
+Completed in 0.14169 (7 reqs/sec) | Rendering: 0.12985 (91%) | DB: 0.00045 (0%) | 200 OK [http://localhost/photos/5/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:13:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000508)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/thumb
+Completed in 0.25672 (3 reqs/sec) | Rendering: 0.24475 (95%) | DB: 0.00051 (0%) | 200 OK [http://localhost/photos/6/thumb.jpg]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-15 08:15:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.001381)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.01563 (63 reqs/sec) | Rendering: 0.00499 (31%) | DB: 0.00138 (8%) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:15:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"3", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000446)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/thumb
+Completed in 1.40462 (0 reqs/sec) | Rendering: 1.39190 (99%) | DB: 0.00045 (0%) | 200 OK [http://localhost/photos/3/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:15:24) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"4", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000446)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/thumb
+Completed in 0.25548 (3 reqs/sec) | Rendering: 0.24315 (95%) | DB: 0.00045 (0%) | 200 OK [http://localhost/photos/4/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:15:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"5", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000494)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/thumb
+Completed in 0.14526 (6 reqs/sec) | Rendering: 0.13301 (91%) | DB: 0.00049 (0%) | 200 OK [http://localhost/photos/5/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:15:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"6", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000443)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/thumb
+Completed in 0.26178 (3 reqs/sec) | Rendering: 0.24886 (95%) | DB: 0.00044 (0%) | 200 OK [http://localhost/photos/6/thumb.jpg]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2008-07-15 08:15:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"action"=>"index", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.001409)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/application
+Rendering photos/index
+Completed in 0.01515 (65 reqs/sec) | Rendering: 0.00473 (31%) | DB: 0.00141 (9%) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:15:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"3", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000409)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/thumb
+Completed in 1.37560 (0 reqs/sec) | Rendering: 1.36413 (99%) | DB: 0.00041 (0%) | 200 OK [http://localhost/photos/3/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:15:41) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"4", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000474)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/thumb
+Completed in 0.24969 (4 reqs/sec) | Rendering: 0.23579 (94%) | DB: 0.00047 (0%) | 200 OK [http://localhost/photos/4/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:15:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"5", "controller"=>"photos"}
+  [4;36;1mPhoto Load (0.000439)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/thumb
+Completed in 0.14060 (7 reqs/sec) | Rendering: 0.12873 (91%) | DB: 0.00044 (0%) | 200 OK [http://localhost/photos/5/thumb.jpg]
+
+
+Processing PhotosController#thumb (for 127.0.0.1 at 2008-07-15 08:15:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzUyMjE3NzZmOGZmYzk1Y2JiMWRlMzM2ODA1ZWFk
+ZjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e405e3ba975cf330f3e9b0ba360d4a2166fed61f
+  Parameters: {"format"=>"jpg", "action"=>"thumb", "id"=>"6", "controller"=>"photos"}
+  [4;35;1mPhoto Load (0.000436)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/thumb
+Completed in 0.25662 (3 reqs/sec) | Rendering: 0.24475 (95%) | DB: 0.00044 (0%) | 200 OK [http://localhost/photos/6/thumb.jpg]

@@ -34,3 +34,8 @@
 	float: left;
 }
 
+.clearbox {
+  clear: both;
+  height: 10px;
+}
+

@@ -4,8 +4,10 @@
         <%=link_to image_tag(formatted_thumb_photo_path(photo, :jpg)),photo %>
       <% end %>
     <% end %>
+    <div class="clearbox">
 
-  
+    </div>
+    <%= link_to 'New photo', new_photo_path %>
 </div>
 
-<%= link_to 'New photo', new_photo_path %>
+
