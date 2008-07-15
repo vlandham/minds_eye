@@ -1,4 +1,4 @@
 @photo.operate do |image|
-  image.resize '100x100'
+  image.resize '150x150'
   # image.shadow
 end
