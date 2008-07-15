@@ -1,0 +1,15 @@
+= Blueprint
+
+Blueprint is a simple Rails plugin that outputs the necessary stylesheet link
+tags for using the Blueprint CSS framework. (http://code.google.com/p/blueprintcss)
+
+The code is from the StaticMatic Helper (http://staticmatic.rubyforge.org/helper_central/)
+
+== Example usage
+
+blueprintcss( options hash )
+
+Options allowed are:
+	:plugins takes an array of plugins to load by name like :plugins => [ :buttons, 'fancy-type' ]
+	:compressed => true or false (default: true) on whether or not to use compressed css files
+	:show_grid => true or false (default: false) on whether or not to draw grid on container background
