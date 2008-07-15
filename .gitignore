@@ -1,6 +1,6 @@
 log/*.log
 tmp/**/*
-public/images/*
+public/images/photos/*
 .DS_Store
 doc/api
 doc/app
