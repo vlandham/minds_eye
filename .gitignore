@@ -1,5 +1,6 @@
 log/*.log
 tmp/**/*
+db/*.sqlite3
 public/images/photos/*
 .DS_Store
 doc/api
