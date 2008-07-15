@@ -19,6 +19,12 @@
   <tr>
     <td><%=h photo.flickr_id %></td>
     <td><%=h photo.taken_at %></td>
+    <td>
+      
+      <%= image_tag formatted_thumb_photo_path(photo, :jpg) %>
+    </td>
+
+    
     <td><%=h photo.uploaded_at %></td>
     <td><%=h photo.description %></td>
     <td><%=h photo.title %></td>

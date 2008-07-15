@@ -1,4 +1,6 @@
 class PhotosController < ApplicationController
+  caches_page :show
+  
   # GET /photos
   # GET /photos.xml
   def index
@@ -16,8 +18,16 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
 
     respond_to do |format|
+      format.jpg   # show.jpg.flexi (http://mysite.com/photos/123.jpg)
       format.html # show.html.erb
       format.xml  { render :xml => @photo }
+    end
+  end
+  
+  def thumb
+    @photo = Photo.find(params[:id])
+    respond_to do |format|
+      format.jpg
     end
   end
 
@@ -61,6 +71,7 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.update_attributes(params[:photo])
+        expire_photo(@photo)
         flash[:notice] = 'Photo was successfully updated.'
         format.html { redirect_to(@photo) }
         format.xml  { head :ok }
@@ -76,10 +87,17 @@ class PhotosController < ApplicationController
   def destroy
     @photo = Photo.find(params[:id])
     @photo.destroy
-
+    expire_photo(@photo)
+    
     respond_to do |format|
       format.html { redirect_to(photos_url) }
       format.xml  { head :ok }
     end
   end
+  
+  private
+    def expire_photo(photo)
+      expire_page formatted_photo_path(photo, :jpg)
+    end
+  
 end

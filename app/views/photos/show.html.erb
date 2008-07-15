@@ -4,6 +4,10 @@
 </p>
 
 <p>
+  <%= image_tag formatted_photo_path(@photo, :jpg) %>
+</p>
+
+<p>
   <b>Taken at:</b>
   <%=h @photo.taken_at %>
 </p>
