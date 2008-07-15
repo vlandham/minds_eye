@@ -5,13 +5,25 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>MindsEye</title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag 'gallery' %>
 </head>
 <body>
+  <div id="logo">
+    
+  </div>
+  <div id="nav">
+    
+  </div>
+  <div id="content">
+    <div class="container">
+      <p style="color: green"><%= flash[:notice] %></p>
 
-<p style="color: green"><%= flash[:notice] %></p>
+      <%= yield  %>
+    </div>
+  </div>
 
-<%= yield  %>
+
 
 </body>
 </html>
