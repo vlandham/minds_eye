@@ -1,0 +1,36 @@
+#gallery {
+	text-align: left;
+	margin: 20px auto;
+	width: 685px;
+	background: #fff;
+	padding: 20px 30px 70px;
+	border-top: 1px solid #E6E6DF;
+	border-right: 1px solid #E6E6DF;
+	border-bottom: 5px solid #E6E6DF;
+	border-left: 1px solid #E6E6DF;
+}
+
+
+.thumbnail a, .thumbnail a:hover {
+	display: block;
+	padding: 9px;
+	margin: 0px 9px 9px 0px;
+	line-height: 0px;
+  border: 1px solid #e6e6e6;
+  background-color: #f6f6f6;
+}
+
+.thumbnail a:visited {
+    background-color: #fcfcfc;
+    border: 1px solid #f8f8f8;
+}
+
+.thumbnail a:hover {
+	background-color: #f3f3f3;
+	border: 1px solid #cccccc;
+}
+
+.thumbnail {
+	float: left;
+}
+
