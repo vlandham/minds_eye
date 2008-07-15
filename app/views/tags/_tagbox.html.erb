@@ -1,7 +1,7 @@
 <div id="tagbox">
   <% for tag in tags %>
     <% div_for(tag, :class => "tag") do %>
-    <% tag_search = tag.respond_to?(:name) ? tag.name : tag %>
+      <% tag_search = tag.respond_to?(:name) ? tag.name : tag %>
       <%= link_to tag, tag_url(tag_search) %>
     <% end %>
   <% end %>
