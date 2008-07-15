@@ -1,0 +1,65 @@
+/*
+	Style sheet for minds_eye
+	Author: Jim V.
+	
+*/
+
+body {
+  margin-top:0px;
+  background: #72839d;
+  color: #444444;
+}
+
+#nav {border-top: 1px solid #777777;background: #333333;padding:6px 0px;*margin-top:-3px;height:26px;}
+
+
+ul#nav {float:right;clear:right;margin:0px 54px -3px 0px;}
+ul#nav li {display:inline;line-height:1.7em;}
+ul#nav li a {display:block;float:left;text-decoration:none;}
+ul#nav li a span{visibility:hidden;}
+/*
+ul#primary_navigation li#portfolio a {width:87px;background: url(../images/style/portfolio.gif) top left no-repeat;}
+ul#primary_navigation li#portfolio a:hover {background-position:0px -24px;}
+ul#primary_navigation li#team a {width:51px;background: url(../images/style/team.gif) top left no-repeat;}
+ul#primary_navigation li#team a:hover {background-position:0px -24px;}
+ul#primary_navigation li#contact a {width:75px;background: url(../images/style/contact.gif) top left no-repeat;}
+ul#primary_navigation li#contact a:hover {background-position:0px -24px;}
+ul#primary_navigation li#blog a {width:52px;background: url(../images/style/blog.gif) top left no-repeat;}
+ul#primary_navigation li#blog a:hover {background-position:0px -24px;}
+*/
+
+#logo {
+	height: 133px;
+	background-color: #72839d;
+	background-image: url("../img/top-statement.jpg");
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+#logo img {
+	padding-left: 25px;
+}
+
+#content .container {background: #dddddd;padding-top:0px;border-top:3px solid #ebebeb;}
+
+/*#content img  {border: 1px solid #91ac7b;padding:9px;background:#eeffff;}*/
+
+/*#content  .logo {border: 1px solid #91ac7b;  margin-right: 13px;}*/
+
+#logo-text {
+	font-size: 150%;
+}
+
+
+/* For great looking type, use this code instead of asdf: 
+   <span class="alt">asdf</span>  
+   Best used on prepositions and ampersands. */
+  
+.alt { 
+  color: #666666; 
+  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif; 
+  font-style: italic;
+  font-weight: normal;
+}
+
+.quote {color:#595131;  font-size: 1em; font-family: georgia italic, times new roman italic, serif;}
