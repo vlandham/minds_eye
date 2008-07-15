@@ -1,60 +1,52 @@
-<p>
-  <b>Flickr:</b>
+<h2 class="photo-title">
   <%=h @photo.flickr_id %>
-</p>
+</h2>
 
-<p>
+<div class="photo">
   <%= image_tag formatted_photo_path(@photo, :jpg) %>
-</p>
+</div>
 
-<p>
-  <b>Taken at:</b>
-  <%=h @photo.taken_at %>
-</p>
+<h2>Tags:</h2>
+<% @photo.tag_list.each do |tag| %>
+  <div class="tag">
+    <%=h tag %>
+  </div>
+<% end %>
 
-<p>
-  <b>Uploaded at:</b>
-  <%=h @photo.uploaded_at %>
-</p>
+<h2>Title:</h2>
+<%=h @photo.title %>
 
-<p>
-  <b>Description:</b>
-  <%=h @photo.description %>
-</p>
+<h2>Description:</h2>
+<%=h @photo.description %>
 
-<p>
-  <b>Title:</b>
-  <%=h @photo.title %>
-</p>
 
-<p>
-  <b>License:</b>
-  <%=h @photo.license %>
-</p>
-
-<p>
-  <b>Flickr url:</b>
-  <%=h @photo.flickr_url %>
-</p>
+<h2>Other Information</h2>
+<table>
+  <tr>
+    <td>Taken at:</td>
+    <td><%=h @photo.taken_at %></td>
+  </tr>
+  <tr>
+    <td>License:</td>
+    <td><%=h @photo.license %></td>
+  </tr>
+  <tr>
+    <td>Width:</td>
+    <td> <%=h @photo.image_width %></td>
+  </tr>
+  <tr>
+    <td>Height:</td>
+    <td><%=h @photo.image_height %></td>
+  </tr>
+  <tr>
+    <td>Original Url:</td>
+    <td><%= link_to "Click Here", @photo.flickr_url %></td>
+  </tr>
+</table>
 
 <p>
   <b>Flickr search:</b>
   <%=h @photo.flickr_search_id %>
-</p>
-
-<p>
-  <b>Image filename:</b>
-  <%=h @photo.image_filename %>
-</p>
-
-<p>
-  <b>Image width:</b>
-  <%=h @photo.image_width %>
-</p>
-
-<p>
-  <b>Image height:</b>
-  <%=h @photo.image_height %>
 </p>
 
 

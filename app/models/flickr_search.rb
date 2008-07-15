@@ -19,6 +19,7 @@ class FlickrSearch < ActiveRecord::Base
     # don't add duplicate photos (based on flickr id)
     return unless Photo.find_by_flickr_id(raw_photo.id).nil?
     # TODO: better way to specify all these parameters? 
+    photo_url = raw_photo.url(:original) || raw_photo.url(:large) || raw_photo.url(:medium) || raw_photo.url(:small) || "error"
     photo = Photo.new(
       :flickr_id => raw_photo.id.to_i,
       :taken_at => raw_photo.taken_at,
@@ -26,15 +27,16 @@ class FlickrSearch < ActiveRecord::Base
       :description => raw_photo.description,
       :title => raw_photo.title,
       :license => raw_photo.license,
-      :flickr_url => raw_photo.url(:original),
+      :flickr_url => photo_url,
       :flickr_url_large => raw_photo.url(:large),
       :flickr_url_medium => raw_photo.url(:medium),
       :flickr_views => raw_photo.views.to_i,
       :flickr_search_id => self.id,
-      :image_file_url => raw_photo.url(:original) || raw_photo.url(:large) || raw_photo.url(:medium) || "error"
+      :image_file_url => photo_url
     )
     if photo.save
       photo.tag_list.add(*raw_photo.tags.split)
+      photo.tag_list.save
     end
   end
   
