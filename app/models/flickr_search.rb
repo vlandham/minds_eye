@@ -20,7 +20,8 @@ class FlickrSearch < ActiveRecord::Base
           self.update_attribute(:current_photo, index+1)
           save_photo(raw_photo)
         end
-    end
+    end #each page
+    self.update_attribute(:completed, true)
   end
   
   def save_photo(raw_photo)
