@@ -10,8 +10,6 @@
       <th>Photos on page</th>
       <th></th>
       <% for current_search in @current_flickr_searches %>
-      <% cur_page = (current_search.start_page+current_search.current_page)-1 %>
-      <% total_pages = (current_search.end_page - current_search.start_page)+1 %>
       <tr>
         <td><%=h current_search.search_parameter %></td>
         <td><%=h current_search.relative_current_page %></td>
@@ -32,20 +30,18 @@
 <h1>Previous Searches</h1>
 <table>
   <tr>
-    <th>Search parameter</th>
-    <th>Search type</th>
+    <th>Search</th>
+    <th>Type</th>
     <th>Start page</th>
     <th>End page</th>
   </tr>
 
 <% for flickr_search in @prev_flickr_searches %>
   <tr>
-    <td><%=h flickr_search.search_parameter %></td>
+    <td><%= link_to flickr_search.search_parameter, flickr_search %></td>
     <td><%=h flickr_search.search_type %></td>
     <td><%=h flickr_search.start_page %></td>
     <td><%=h flickr_search.end_page %></td>
-    <td><%= link_to 'Show', flickr_search %></td>
-    <td><%= link_to 'Destroy', flickr_search, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
