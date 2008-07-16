@@ -1,3 +1,5 @@
 <%= render :partial => 'gallery', :locals => {:photos => @photos}%>
+<%= render :partial => 'paginate', :locas => {:object => @photos} %>
+
 <%= link_to 'New photo', new_photo_path %>
 

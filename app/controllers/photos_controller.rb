@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.xml
   def index
-    @photos = Photo.find(:all)
+    @photos = Photo.paginate :per_page => 2, :page => params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
