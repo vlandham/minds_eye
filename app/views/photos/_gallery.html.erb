@@ -2,7 +2,8 @@
     <% for photo in photos %>
       <% div_for(photo, :class => "thumbnail") do %>
         <%=link_to image_tag(formatted_thumb_photo_path(photo, :jpg)),photo %>
-        <%= link_to image_tag(icon_of("cross")), photo, :method => :delete %>
+        <%= link_to image_tag(icon_of("cross")), photo, :method => :delete, :class => "icon" %>
+        <!-- <%= link_to image_tag(icon_of("star")), photo, :method => :delete, :class => "icon" %> -->
       <% end %>
     <% end %>
     <div class="clearbox"></div>

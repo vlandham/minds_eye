@@ -10,6 +10,9 @@
 	border-left: 1px solid #E6E6DF;
 }
 
+.thumbnail {
+	float: left;
+}
 
 .thumbnail a, .thumbnail a:hover {
 	display: block;
@@ -30,8 +33,9 @@
 	border: 1px solid #cccccc;
 }
 
-.thumbnail {
-	float: left;
+.thumbnail a.icon {
+/*  float: left;*/
+/*  width: 33%;*/
 }
 
 .title {
