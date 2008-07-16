@@ -28,17 +28,11 @@ a:hover {
   color: #111;
 }
 
-a.search-button, a.search-button:hover {
-  width: 40px;
-  display: block;
-  padding: 20px;
-  margin: 20px;
-  border: 1px dotted #777777;
+a.search-button img {
+  padding: 20px 20px 20px 20px;
+  margin: 20px 20px 20px 20px;
 }
 
-a.search-button:hover {
-  background-color: #ededed;
-}
 
 #nav {border-top: 8px solid #404040;background-color: #660000;padding:0px 0px;*margin-top:-3px;height:40px;}
 
