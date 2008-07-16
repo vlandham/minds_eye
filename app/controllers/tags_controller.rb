@@ -2,7 +2,7 @@ class TagsController < ApplicationController
   # GET /tags
   # GET /tags.xml
   def index
-    @tags = Tag.find(:all)
+    @tags = Tag.paginate :page => params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +14,7 @@ class TagsController < ApplicationController
   # GET /tags/1.xml
   def show
     @tag = Tag.find_by_name(params[:id])
-    @photos = Photo.find_tagged_with(@tag)
+    @photos = Photo.find_tagged_with(@tag).paginate :page => params[:page]
 
     respond_to do |format|
       format.html # show.html.erb
