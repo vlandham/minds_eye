@@ -2,7 +2,8 @@ class FlickrSearchesController < ApplicationController
   # GET /flickr_searches
   # GET /flickr_searches.xml
   def index
-    @flickr_searches = FlickrSearch.find(:all)
+    @current_flickr_searches = FlickrSearch.find(:all, :conditions => ["completed = ?", false])
+    @prev_flickr_searches = FlickrSearch.find(:all, :conditions => ["completed = ?", true])
 
     respond_to do |format|
       format.html # index.html.erb

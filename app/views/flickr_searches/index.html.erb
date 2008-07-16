@@ -1,3 +1,31 @@
+<h1>Current Searches</h1>
+<% unless @current_flickr_searches.empty? %>
+<div id="current-searches">
+  <table>
+    <tr>
+      <th>Searching for</th>
+      <th>Current page</th>
+      <th>Total pages</th>
+      <th>Current photo</th>
+      <th>Photos on page</th>
+      <th></th>
+      <% for current_search in @current_flickr_searches %>
+      <% cur_page = (current_search.start_page+current_search.current_page)-1 %>
+      <% total_pages = (current_search.end_page - current_search.start_page)+1 %>
+      <tr>
+        <td><%=h current_search.search_parameter %></td>
+        <td><%=h cur_page %></td>
+        <td><%=h total_pages%></td>
+        <td><%=h current_search.current_photo%></td>
+        <td><%=h current_search.photos_per_page || "wait" %></td>
+        <td><%= image_tag("spinner.gif") %></td>
+      </tr>
+      <% end %>
+    </tr>
+  </table>
+</div>
+<% end %>
+
 
 <%= link_to 'Search', new_flickr_search_path, {:class => "search-button"} %>
 
@@ -10,7 +38,7 @@
     <th>End page</th>
   </tr>
 
-<% for flickr_search in @flickr_searches %>
+<% for flickr_search in @prev_flickr_searches %>
   <tr>
     <td><%=h flickr_search.search_parameter %></td>
     <td><%=h flickr_search.search_type %></td>

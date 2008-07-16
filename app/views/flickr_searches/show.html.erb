@@ -1,9 +1,11 @@
 <h2 class="title"><%=h @flickr_search.search_parameter %></h2>
+<% unless @flickr_search.completed %>
 <p>
   <b>Currently on:</b><br/>
   page: <%= (@flickr_search.start_page+@flickr_search.current_page)-1 %><br />
   photo: <%= @flickr_search.current_photo %> of <%= @flickr_search.photos_per_page || 0%>
 </p>
+<% end %>
 <ul>
   <li><b>Search type:</b> <%=h @flickr_search.search_type %> </li>
   <li><b>Start page:</b> <%=h @flickr_search.start_page %></li>
