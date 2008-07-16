@@ -1,5 +1,5 @@
-<h1>Current Searches</h1>
 <% unless @current_flickr_searches.empty? %>
+<h1>Current Searches</h1>
 <div id="current-searches">
   <table>
     <tr>
@@ -14,8 +14,8 @@
       <% total_pages = (current_search.end_page - current_search.start_page)+1 %>
       <tr>
         <td><%=h current_search.search_parameter %></td>
-        <td><%=h cur_page %></td>
-        <td><%=h total_pages%></td>
+        <td><%=h current_search.relative_current_page %></td>
+        <td><%=h current_search.total_pages%></td>
         <td><%=h current_search.current_photo%></td>
         <td><%=h current_search.photos_per_page || "wait" %></td>
         <td><%= image_tag("spinner.gif") %></td>

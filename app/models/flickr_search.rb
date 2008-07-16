@@ -4,6 +4,15 @@ class FlickrSearch < ActiveRecord::Base
   validates_numericality_of :start_page, :end_page  
   FLICKR_CONFIG_FILE = "#{RAILS_ROOT}/config/flickr.yml"
   
+  
+  def relative_current_page
+    (self.start_page+self.current_page)-1
+  end
+  
+  def total_pages
+    (self.end_page - self.start_page)+1
+  end
+  
   def execute
     flickr = Flickr.new(FLICKR_CONFIG_FILE)
     
