@@ -2,7 +2,7 @@
 <% unless @flickr_search.completed %>
 <p>
   <b>Currently on:</b><br/>
-  page: <%= (@flickr_search.start_page+@flickr_search.current_page)-1 %><br />
+  page: <%= @flickr_search.relative_current_page %><br />
   photo: <%= @flickr_search.current_photo %> of <%= @flickr_search.photos_per_page || 0%>
 </p>
 <% end %>

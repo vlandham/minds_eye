@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  caches_page :show
+  caches_page :show, :thumb
   
   # GET /photos
   # GET /photos.xml
@@ -98,6 +98,7 @@ class PhotosController < ApplicationController
   private
     def expire_photo(photo)
       expire_page formatted_photo_path(photo, :jpg)
+      expire_page formatted_thumb_photo_path(photo, :jpg)
     end
   
 end
