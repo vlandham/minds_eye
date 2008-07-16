@@ -4,20 +4,8 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :search_parameter %><br />
-    <%= f.text_field :search_parameter %>
-  </p>
-  <p>
-    <%= f.label :search_type %><br />
-    <%= f.text_field :search_type %>
-  </p>
-  <p>
-    <%= f.label :start_page %><br />
-    <%= f.text_field :start_page %>
-  </p>
-  <p>
-    <%= f.label :end_page %><br />
-    <%= f.text_field :end_page %>
+    <%= f.label :completed %><br />
+    <%= f.check_box :completed %>
   </p>
   <p>
     <%= f.submit "Update" %>

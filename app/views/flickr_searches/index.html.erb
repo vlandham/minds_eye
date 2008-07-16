@@ -11,7 +11,7 @@
       <th></th>
       <% for current_search in @current_flickr_searches %>
       <tr>
-        <td><%=h current_search.search_parameter %></td>
+        <td><%= link_to current_search.search_parameter, current_search %></td>
         <td><%=h current_search.current_page %></td>
         <td><%=h current_search.total_pages%></td>
         <td><%=h current_search.current_photo%></td>
