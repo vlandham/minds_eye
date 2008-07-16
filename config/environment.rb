@@ -32,6 +32,9 @@ Rails::Initializer.run do |config|
   # http://github.com/commonthread/flickr_fu/
   # But i don't know if this version is in github or just rubyforge
   config.gem "flickr-fu", :lib => "flickr_fu", :version => '>= 0.1.4'
+  config.gem 'mislav-will_paginate', :version => '~> 2.3.2', :lib => 'will_paginate', 
+      :source => 'http://gems.github.com'
+  
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
