@@ -80,6 +80,11 @@ ul#primary_navigation li#blog a:hover {background-position:0px -24px;}
 	font-size: 150%;
 }
 
+#flash {
+  text-align: center;
+  color: green;
+}
+
 
 
 /* For great looking type, use this code instead of asdf: 

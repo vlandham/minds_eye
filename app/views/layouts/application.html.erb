@@ -18,7 +18,9 @@
   </div>
   <div id="content">
     <div class="container">
-      <p style="color: green"><%= flash[:notice] %></p>
+      <div id="flash">
+        <%= flash[:notice] %>
+      </div>
 
       <%= yield  %>
     </div>

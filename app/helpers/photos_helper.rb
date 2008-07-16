@@ -1,5 +1,5 @@
 module PhotosHelper
   def icon_of(name, extension="png")
-    "images/icons/#{name}.#{extension}"
+    "icons/#{name}.#{extension}"
   end
 end
