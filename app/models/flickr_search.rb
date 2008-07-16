@@ -13,7 +13,11 @@ class FlickrSearch < ActiveRecord::Base
         photos = flickr.photos.search(self.search_type.to_sym => self.search_parameter, :page => current_page)
         # If empty, no more photos, so break
         break if photos.empty?
-        photos.each do |raw_photo|
+        self.current_page = current_page
+        self.photos_per_page = photos.size
+        self.save!
+        photos.each_with_index do |raw_photo, index|
+          self.update_attribute(:current_photo, index+1)
           save_photo(raw_photo)
         end
     end

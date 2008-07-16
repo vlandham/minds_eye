@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080715161654) do
+ActiveRecord::Schema.define(:version => 20080716032708) do
 
   create_table "flickr_searches", :force => true do |t|
     t.string   "search_parameter"
@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(:version => 20080715161654) do
     t.integer  "end_page"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "current_page",     :default => 0
+    t.integer  "current_photo",    :default => 0
+    t.integer  "photos_per_page"
   end
 
   create_table "photos", :force => true do |t|
@@ -47,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20080715161654) do
     t.datetime "created_at"
   end
 
-  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
   add_index "taggings", ["taggable_id", "taggable_type"], :name => "index_taggings_on_taggable_id_and_taggable_type"
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
 
   create_table "tags", :force => true do |t|
     t.string "name"
