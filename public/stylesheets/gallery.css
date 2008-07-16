@@ -1,7 +1,7 @@
 #gallery {
 	text-align: left;
 	margin: 10px auto;
-	width: 685px;
+	width: 800px;
 	background: #ffffff;
 	padding: 20px 20px 20px;
 	border-top: 1px solid #E6E6DF;
@@ -12,9 +12,11 @@
 
 .thumbnail {
 	float: left;
+	height: 230px;
 }
 
 .thumbnail a, .thumbnail a:hover {
+  
 	display: block;
 	padding: 9px;
 	margin: 0px 9px 9px 0px;
