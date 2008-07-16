@@ -6,7 +6,7 @@
 
 body {
   margin-top:0px;
-  background: #72839d;
+  background-color: #262626;
   color: #000;
 }
 
@@ -40,13 +40,27 @@ a.search-button:hover {
   background-color: #ededed;
 }
 
-#nav {border-top: 1px solid #777777;background: #333333;padding:6px 0px;*margin-top:-3px;height:26px;}
+#nav {border-top: 8px solid #404040;background-color: #660000;padding:0px 0px;*margin-top:-3px;height:40px;}
 
 
-ul#nav {float:right;clear:right;margin:0px 54px -3px 0px;}
-ul#nav li {display:inline;line-height:1.7em;}
-ul#nav li a {display:block;float:left;text-decoration:none;}
-ul#nav li a span{visibility:hidden;}
+#nav ul {float:right;clear:right;margin:0px 57px -3px 0px;}
+#nav ul li {display:inline;line-height:1.7em;}
+#nav ul li a {display:block;float:left;text-decoration:none; color: #ffffff;
+              padding-left:10px; padding-right:10px; padding-bottom:13px; padding-top:5px;
+              margin-right: 5px;
+              font-size:1.39em; 
+              text-transform: uppercase;
+              background-color:#660000;}
+              
+#nav ul li a:hover {
+  color: #AD0000;
+}
+
+#nav ul li.current a {
+  color: #000000;
+  background-color:#ffffff;
+}
+
 /*
 ul#primary_navigation li#portfolio a {width:87px;background: url(../images/style/portfolio.gif) top left no-repeat;}
 ul#primary_navigation li#portfolio a:hover {background-position:0px -24px;}
@@ -60,7 +74,7 @@ ul#primary_navigation li#blog a:hover {background-position:0px -24px;}
 
 #logo {
 	height: 133px;
-	background-color: #72839d;
+	background-color: #262626;
 	/*background-repeat: no-repeat;
 	 background-position: right center;*/
 }
@@ -69,7 +83,7 @@ ul#primary_navigation li#blog a:hover {background-position:0px -24px;}
 	padding-left: 25px;
 }
 
-#content .container {background: #ffffff; width: 890px; margin:auto; padding-top:0px;border-top:3px solid #ebebeb;padding-left: 10px;}
+#content .container {background: #ffffff; width: 890px; margin:auto; padding-top:0px;border-top:3px solid #ffffff;padding-left: 10px;}
 
 
 /*#content img  {border: 1px solid #91ac7b;padding:9px;background:#eeffff;}*/
