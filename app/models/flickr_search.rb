@@ -6,7 +6,7 @@ class FlickrSearch < ActiveRecord::Base
   
   
   def relative_current_page
-    (self.start_page+self.current_page)-1
+    (self.current_page-self.start_page)+1
   end
   
   def total_pages
