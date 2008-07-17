@@ -31,6 +31,10 @@ class FlickrSearch < ActiveRecord::Base
             save_photo(raw_photo)
           rescue RuntimeError
             RAILS_DEFAULT_LOGGER.error("\n Error: could not save photo #{raw_photo.flickr_id} \n")
+          rescue Exception =>
+            RAILS_DEFAULT_LOGGER.error("\n Error in execute: #{msg}\n") #just to be on the safe side
+          rescue => msg
+            RAILS_DEFAULT_LOGGER.error("\n Error in execute: #{msg}\n")
           end
         end
     end #each page
