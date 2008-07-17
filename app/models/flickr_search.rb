@@ -1,5 +1,5 @@
 class FlickrSearch < ActiveRecord::Base
-  has_many :photos
+  has_many :photos, :dependent => :destroy
   validates_presence_of :search_parameter, :search_type, :start_page, :end_page
   validates_numericality_of :start_page, :end_page  
   FLICKR_CONFIG_FILE = "#{RAILS_ROOT}/config/flickr.yml"
