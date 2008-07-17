@@ -8,7 +8,11 @@ class Photo < ActiveRecord::Base
   belongs_to :flickr_search
   
   def self.search(search, page)
-    tags = search.split.join(", ")
-    self.find_tagged_with(*tags).paginate :page => page
+    if search
+      tags = search.split.join(", ")
+      self.find_tagged_with(*tags).paginate :page => page
+    else
+      paginate  :page => page
+    end
   end
 end
