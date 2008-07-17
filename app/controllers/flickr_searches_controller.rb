@@ -50,7 +50,7 @@ class FlickrSearchesController < ApplicationController
           @flickr_search.execute
         end
         flash[:notice] = 'Now Downloading from Flickr. Please Be Patient'
-        format.html { redirect_to(@flickr_search) }
+        format.html { redirect_to(flickr_searches_url) }
         format.xml  { render :xml => @flickr_search, :status => :created, :location => @flickr_search }
       else
         format.html { render :action => "new" }
@@ -67,7 +67,7 @@ class FlickrSearchesController < ApplicationController
     respond_to do |format|
       if @flickr_search.update_attributes(params[:flickr_search])
         flash[:notice] = 'FlickrSearch was successfully updated.'
-        format.html { redirect_to(@flickr_search) }
+        format.html { redirect_to(flickr_searches_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
