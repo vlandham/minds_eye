@@ -17,9 +17,9 @@
   <div id="nav">
     <div class="container">
       <% ubermenu do |m| %>
-        <% m.action 'Photos', photos_path %>
-        <% m.action 'Tags', tags_path %>
-        <% m.action 'Flickr', flickr_searches_path %>
+        <% m.action 'Photos', photos_path, :current => controller.controller_name == 'photos' %>
+        <% m.action 'Tags', tags_path, :current => controller.controller_name == 'tags' %>
+        <% m.action 'Flickr', flickr_searches_path, :current => controller.controller_name == 'flickr_searches' %>
       <% end %>
     </div>
   </div>

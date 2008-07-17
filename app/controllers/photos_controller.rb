@@ -86,9 +86,9 @@ class PhotosController < ApplicationController
   # DELETE /photos/1.xml
   def destroy
     @photo = Photo.find(params[:id])
-    @photo.destroy
     expire_photo(@photo)
-    
+    @photo.destroy
+  
     respond_to do |format|
       format.html { redirect_to(photos_url) }
       format.js
