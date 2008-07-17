@@ -15,11 +15,13 @@
     <%= link_to image_tag("logo.jpg"), photos_path %>
   </div>
   <div id="nav">
-    <% ubermenu do |m| %>
-      <% m.action 'Photos', photos_path %>
-      <% m.action 'Tags', tags_path %>
-      <% m.action 'Flickr', flickr_searches_path %>
-    <% end %>
+    <div class="container">
+      <% ubermenu do |m| %>
+        <% m.action 'Photos', photos_path %>
+        <% m.action 'Tags', tags_path %>
+        <% m.action 'Flickr', flickr_searches_path %>
+      <% end %>
+    </div>
   </div>
   <div id="content">
     <div class="container">
