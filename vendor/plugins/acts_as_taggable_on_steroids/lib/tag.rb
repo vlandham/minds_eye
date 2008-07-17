@@ -6,13 +6,10 @@ class Tag < ActiveRecord::Base
   
   cattr_accessor :destroy_unused
   self.destroy_unused = true
-  
-  def self.search(search)
-    if search
-      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-    else
-      find(:all)
-    end
+    
+  def self.search(search, page)
+   paginate  :page => page,
+             :conditions => ['name like ?', "%#{search}%"], :order => 'name'
   end
   
   # LIKE is used for cross-database case-insensitivity
