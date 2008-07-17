@@ -1,8 +1,7 @@
 <div id="search">
   <% form_tag tags_path, :method => 'get' do %>
     <% content_tag :label do %>
-      Search:
-      <%= text_field_tag :search, params[:search] %>
+      <%= text_field_tag :search, params[:search], :class => "text" %>
       <%= submit_tag "Search", :name => nil %>
       <%= link_to image_tag(icon_of("cross")), tags_path %>
     <% end %>

@@ -28,6 +28,29 @@ a:hover {
   color: #111;
 }
 
+#search {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#search label {
+  font-size: 1.3em;
+  color: #262626;
+}
+
+#search input {
+  font-size: 1.3em;
+}
+
+#search input.text {
+/*  border: 4px solid #b4b4b4;*/
+}
+
+#search img {
+  margin-left: 5px;
+}
+
 a.search-button img {
   padding: 20px 20px 20px 20px;
   margin: 20px 20px 20px 20px;
@@ -53,6 +76,7 @@ a.search-button img {
 #nav ul li.current a {
   color: #000000;
   background-color:#ffffff;
+  font-weight: bold;
 }
 
 /*
