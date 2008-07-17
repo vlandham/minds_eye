@@ -1,4 +1,5 @@
 <%= render :partial => 'tags/search', :locals => {:model_path => photos_path}%>
+<%= render :partial => 'paginate', :locas => {:object => @photos} %>
 <%= render :partial => 'gallery', :locals => {:photos => @photos}%>
 <%= render :partial => 'paginate', :locas => {:object => @photos} %>
 
