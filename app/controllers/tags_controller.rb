@@ -2,7 +2,7 @@ class TagsController < ApplicationController
   # GET /tags
   # GET /tags.xml
   def index
-    @tags = Tag.paginate :page => params[:page]
+    @tags = Tag.search(params[:search]).paginate :page => params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
