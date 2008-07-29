@@ -98,7 +98,22 @@ ul#primary_navigation li#blog a:hover {background-position:0px -24px;}
 }
 
 #logo img {
+  float:left;
 	padding-left: 25px;
+}
+
+#logo-text {
+	font-size: 150%;
+}
+
+
+#count {
+  color: #ffffff;
+  float:right;
+  margin-top:30px;
+  margin-right: 60px;
+  font-size: 3em;
+  clear:right;
 }
 
 #content .container {background: #ffffff; width: 890px; margin:auto; padding-top:0px;border-top:3px solid #ffffff;padding-left: 10px;}
@@ -108,9 +123,6 @@ ul#primary_navigation li#blog a:hover {background-position:0px -24px;}
 
 /*#content  .logo {border: 1px solid #91ac7b;  margin-right: 13px;}*/
 
-#logo-text {
-	font-size: 150%;
-}
 
 #flash {
   text-align: center;

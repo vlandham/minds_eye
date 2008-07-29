@@ -3,7 +3,7 @@ class TagsController < ApplicationController
   # GET /tags.xml
   def index
     @tags = Tag.search(params[:search], params[:page])
-
+    @tags_size = Tag.count
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @tags }

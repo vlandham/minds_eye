@@ -5,7 +5,7 @@ class PhotosController < ApplicationController
   # GET /photos.xml
   def index
     @photos = Photo.search(params[:search], params[:page])
-
+    @photos_size = Photo.count # for the count section at the top
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @photos }

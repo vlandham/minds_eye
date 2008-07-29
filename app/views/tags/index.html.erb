@@ -1,3 +1,4 @@
+<%= render :partial => 'photos/count', :locals => {:size => @tags_size, :object => "Tags"} %>
 <%= render :partial => 'search', :locals => {:model_path => tags_path} %>
 <%= render :partial => 'photos/paginate', :locals => {:object => @tags} %>
 <%= render :partial => 'tagbox', :locals => {:tags => @tags} %>
