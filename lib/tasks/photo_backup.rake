@@ -4,8 +4,7 @@ namespace :me do
     local_dir = "/Users/vlandham/Sites/minds_eye/public/images/"
     remote_dir = "/Users/vlandham/Sites/minds_eye/public/images/photos"
     `rsync -e "ssh" -rcaE --update --delete-after vlandham@192.168.1.3:#{remote_dir} #{local_dir} -v`
-  end
-  
+  end  
   task :database_sync do
     local_dir = "/Users/vlandham/Sites/minds_eye/db/production.sqlite3"
     remote_dir = "/Users/vlandham/Sites/minds_eye/db/development.sqlite3"
