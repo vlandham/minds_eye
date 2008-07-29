@@ -14,7 +14,7 @@ class FlickrSearchesController < ApplicationController
   # GET /flickr_searches/1
   # GET /flickr_searches/1.xml
   def show
-    @flickr_search = FlickrSearch.find(params[:id])
+    @flickr_search = FlickrSearch.find(params[:id], :order => "search_parameter DESC")
 
     respond_to do |format|
       format.html # show.html.erb
