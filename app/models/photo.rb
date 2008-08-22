@@ -10,9 +10,9 @@ class Photo < ActiveRecord::Base
   def self.search(search, page)
     if search
       tags = search.split.join(", ")
-      self.find_tagged_with(*tags).paginate :page => page
+      self.find_tagged_with(*tags).paginate :page => page, :order => 'created_at DESC'
     else
-      paginate  :page => page
+      paginate  :page => page, :order => 'created_at ASC'
     end
   end
 end
